@@ -1,0 +1,24 @@
+name: Jalankan Preprocessing
+
+on: [push]
+
+jobs:
+  run-automation:              # <--- Perhatikan spasi masuk
+    runs-on: ubuntu-latest     # <--- Lurus dengan run-automation
+    steps:                     # <--- Lurus dengan runs-on
+      - name: Checkout Code    # <--- Menjorok ke dalam (strip lurus)
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install Libraries
+        run: pip install -r requirements.txt
+
+      - name: Run Automate Script
+        run: |
+          cd preprocessing
+          python automate_Christian Moses.py  
+          # (Pastikan nama file di atas SAMA PERSIS dengan nama file asli Anda)
