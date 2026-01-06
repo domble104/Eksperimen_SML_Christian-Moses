@@ -20,5 +20,5 @@ jobs:
       - name: Run Automate Script
         run: |
           cd preprocessing
-          python automate_Christian Moses.py  
+          python automate_Moses.py  
           # (Pastikan nama file di atas SAMA PERSIS dengan nama file asli Anda)
